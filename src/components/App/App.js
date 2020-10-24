@@ -9,7 +9,18 @@ class App extends Component {
     galleryArray: []
   };
 
-  
+  likedPictures =(imageId) => {
+    console.log('in likedPictures');
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${imageId}`
+    }).then((response) =>{
+      console.log(response.data);
+      this.getPictures();
+    }).catch((error) => {
+      console.log(error);
+     });
+    }
 
   getPictures =() => {
     console.log('in getPictures');
@@ -39,7 +50,7 @@ class App extends Component {
         <p>Gallery goes here</p>
         {/* {JSON.stringify(this.state)} */}
 
-        <GalleryList galleryArray={this.state.galleryArray}/>
+        <GalleryList galleryArray={this.state.galleryArray} likedPictures={this.likedPictures}/>
       </div>
     );
   }

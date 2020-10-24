@@ -10,7 +10,7 @@ class GalleryList extends Component{
             {/* <h1> {JSON.stringify(this.props.galleryArray)}</h1> */}
 
                {this.props.galleryArray.map((image) =>{
-                  return <GalleryItem image={image}/>
+                  return <GalleryItem image={image} likedPictures={this.props.likedPictures} />
       
               })} 
             </>

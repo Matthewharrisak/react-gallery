@@ -19,18 +19,19 @@ class GalleryItem extends Component{
     render(){
         return(
             <>
-            
+            <div className="masterDiv">
             <div onClick={() => this.imageClick()} className="galleryWrapper">
             {this.state.picDescription ?
             <p> {this.props.image.description}</p>
             :
             <img src={this.props.image.path}/>}          
                 <br/>
-            <button> like </button>
+            {/* <button onClick={() => this.props.likedPictures()}> like </button> */}
 
             </div>
-           
-                  
+            <button onClick={() => this.props.likedPictures(this.props.image.id)}> like </button>
+                <p> {this.props.image.likes} </p>
+             </div>     
             </>
         );
     }
