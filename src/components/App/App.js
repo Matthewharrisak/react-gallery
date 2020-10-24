@@ -35,7 +35,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        {JSON.stringify(this.state)}
+        {/* {JSON.stringify(this.state)} */}
 
         <GalleryList galleryArray ={this.state.galleryArray}/>
       </div>
