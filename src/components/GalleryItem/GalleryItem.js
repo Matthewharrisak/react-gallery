@@ -7,28 +7,25 @@ class GalleryItem extends Component{
     // like button function / 
 
     state = {
-        imageDescription: false
+        picDescription: false
     }
 
     imageClick = () => {
-        console.log('whoa buddy! were clicked' , this.state.imageDescription );
+        console.log('whoa buddy! were clicked' , this.state.picDescription );
         this.setState({
-            imageDescription: !this.state.imageDescription // This will allow us the toggle between true / false on upon clicking the image
+            picDescription: !this.state.picDescription // This will allow us the toggle between true / false on upon clicking the image
         })
         }
     render(){
         return(
             <>
             
-            <div className="galleryWrapper">
-            <div><img src={this.props.image.path}
-             onClick={() => this.imageClick()} />
-            </div>
-            {this.props.image.imageDescription  ?
-             <p> imageDescription</p>
-             :
-             <p>is not imageDescription</p>
-             }
+            <div onClick={() => this.imageClick()} className="galleryWrapper">
+            {this.state.picDescription ?
+            <p> {this.props.image.description}</p>
+            :
+            <img src={this.props.image.path}/>}          
+                <br/>
             <button> like </button>
 
             </div>
