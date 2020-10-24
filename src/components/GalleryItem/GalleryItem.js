@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import GalleryList from '../GalleryList/GalleryList'
+
 
 
 class GalleryItem extends Component{
@@ -15,11 +15,13 @@ class GalleryItem extends Component{
             <>
             
             <div className="galleryWrapper">
-            <div><img src={this.props.image.path} onClick={() => this.imageClick()} />
+            <div><img src={this.props.image.path}
+             onClick={() => this.imageClick()} />
+             <button> like </button>
             </div>
-
+            </div>
            
-                  </div>
+                  
             </>
         );
     }

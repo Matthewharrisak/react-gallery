@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: aquamarine;
+
 }
 
 .App-header {
@@ -15,6 +17,19 @@
 
 .App-intro {
   font-size: large;
+}
+
+.galleryWrapper {
+
+  border: 10px dotted salmon;
+  padding: 20px;
+  width: 300px;
+  margin: 10px auto;
+  display: inline-block;
+
+  
+
+
 }
 
 @keyframes App-logo-spin {
