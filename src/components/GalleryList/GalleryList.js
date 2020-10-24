@@ -9,10 +9,15 @@ class GalleryList extends Component{
             <>
             <h1> whats up from GalleryList</h1>
               {this.props.galleryArray.map((image) =>{
-                  return image;
+                //   {JSON.stringify(image)}
+                  return <div><img src={image.path}/>
+                      
+
+                  </div>
+      
               })}
             </>
-        )
+        );
     }
 }
 
