@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { render } from 'react-dom'
+import GalleryItem from '../GalleryItem/GalleryItem'
 
 
 class GalleryList extends Component{
@@ -10,10 +10,7 @@ class GalleryList extends Component{
             <h1> whats up from GalleryList</h1>
               {this.props.galleryArray.map((image) =>{
                 //   {JSON.stringify(image)}
-                  return <div><img src={image.path}/>
-                      
-
-                  </div>
+                  return <GalleryItem image={image}/>
       
               })}
             </>
