@@ -9,6 +9,8 @@ class App extends Component {
     galleryArray: []
   };
 
+  
+
   getPictures =() => {
     console.log('in getPictures');
     axios({
