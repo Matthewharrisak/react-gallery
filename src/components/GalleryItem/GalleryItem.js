@@ -4,10 +4,12 @@ import GalleryList from '../GalleryList/GalleryList'
 
 class GalleryItem extends Component{
 
+    // like button function / 
+
     render(){
         return(
             <>
-            <GalleryList/>
+            
             <div className="galleryWrapper">
             <h3><img src={this.props.image.path}/> </h3>
 

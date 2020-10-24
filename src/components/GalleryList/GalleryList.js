@@ -7,12 +7,12 @@ class GalleryList extends Component{
     render(){
         return(
             <>
-            <h1> whats up from GalleryList</h1>
-              {this.props.galleryArray.map((image) =>{
-                //   {JSON.stringify(image)}
+            {/* <h1> {JSON.stringify(this.props.galleryArray)}</h1> */}
+
+               {this.props.galleryArray.map((image) =>{
                   return <GalleryItem image={image}/>
       
-              })}
+              })} 
             </>
         );
     }
