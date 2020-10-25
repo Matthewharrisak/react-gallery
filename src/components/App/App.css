@@ -8,7 +8,7 @@
   background-color: #222;
   height: 70px;
   padding: 20px;
-  color: white;
+  color: rgb(235, 23, 23);
 }
 
 .App-title {
@@ -19,14 +19,6 @@
   font-size: large;
 }
 
-/* .galleryWrapper {
-
-  border: 10px dotted salmon;
-  padding: 20px;
-  width: 300px;
-  margin: 10px auto;
-  display: inline-block;
-} */
 
 .masterDiv {
   border: 10px dotted salmon;
