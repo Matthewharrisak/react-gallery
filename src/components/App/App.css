@@ -19,17 +19,21 @@
   font-size: large;
 }
 
-.galleryWrapper {
+/* .galleryWrapper {
 
   border: 10px dotted salmon;
   padding: 20px;
   width: 300px;
   margin: 10px auto;
   display: inline-block;
+} */
 
-  
-
-
+.masterDiv {
+  border: 10px dotted salmon;
+  padding: 20px;
+  width: 300px;
+  margin: 10px auto;
+  display: inline-block;
 }
 
 @keyframes App-logo-spin {
