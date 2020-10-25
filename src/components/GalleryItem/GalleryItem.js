@@ -4,10 +4,9 @@ import React, {Component} from 'react'
 
 class GalleryItem extends Component{
 
-    // like button function / 
 
     state = {
-        picDescription: false
+        picDescription: false // by setting picDecription to "false" we can use true and false to toggle between values
     }
 
     imageClick = () => {
@@ -20,16 +19,17 @@ class GalleryItem extends Component{
         return(
             <>
             <div className="masterDiv">
-            <div onClick={() => this.imageClick()} className="galleryWrapper">
-            {this.state.picDescription ?
+                  <div onClick={() => this.imageClick()} className="galleryWrapper">
+                    {/* Conditional rendering with a turnary operator  */}
+                     {this.state.picDescription ?
             <p> {this.props.image.description}</p>
             :
-            <img src={this.props.image.path}/>}          
+                 // displays the image onto the DOM
+                <img src={this.props.image.path}/>}          
                 <br/>
-            {/* <button onClick={() => this.props.likedPictures()}> like </button> */}
 
             </div>
-            <button onClick={() => this.props.likedPictures(this.props.image.id)}> like </button>
+                 <button onClick={() => this.props.likedPictures(this.props.image.id)}> like </button>
                 <p> {this.props.image.likes} </p>
              </div>     
             </>

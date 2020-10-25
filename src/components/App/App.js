@@ -5,10 +5,12 @@ import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
 
-  state = {
+  state = { // galleryArray is the what will store the gallery.data objects for them to then be passed to other components by using Props
     galleryArray: []
   };
 
+
+  // PUT request to update the "likes" for the photo on the DOM
   likedPictures =(imageId) => {
     console.log('in likedPictures');
     axios({
@@ -22,6 +24,8 @@ class App extends Component {
      });
     }
 
+
+      // Gets data from "gallery.data" and displays reasign's the data to equal galleryArray by using this.setState
   getPictures =() => {
     console.log('in getPictures');
     axios({
@@ -36,7 +40,7 @@ class App extends Component {
       console.log(error)
     });
   }
-  componentDidMount = () => {
+  componentDidMount = () => { // Displays getPictures on the DOM
     this.getPictures();
   }
 
@@ -44,13 +48,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
+          <h1 className="App-title">FakeBlock!</h1>
         </header>
         <br/>
-        <p>Gallery goes here</p>
-        {/* {JSON.stringify(this.state)} */}
-
-        <GalleryList galleryArray={this.state.galleryArray} likedPictures={this.likedPictures}/>
+        
+        {/* GalleryList is being sent the PUT request function and the the galleryArray */}
+        <GalleryList galleryArray={this.state.galleryArray} likedPictures={this.likedPictures}/> 
       </div>
     );
   }

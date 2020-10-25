@@ -7,8 +7,8 @@ class GalleryList extends Component{
     render(){
         return(
             <>
-            {/* <h1> {JSON.stringify(this.props.galleryArray)}</h1> */}
-
+            
+                {/* Takes galleryArray and loops throguh the array with .map and pulls in the functionalilty from GalleryItem  */}
                {this.props.galleryArray.map((image) =>{
                   return <GalleryItem image={image} likedPictures={this.props.likedPictures} />
       
